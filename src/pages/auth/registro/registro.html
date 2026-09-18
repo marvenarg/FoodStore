@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Store - Iniciar Sesión</title>
-    <link rel="stylesheet" href="./login.css">
+    <title>Food Store - Registro</title>
+    <link rel="stylesheet" href="../login/login.css">
 </head>
 <body>
     <main class="login-container">
-        <form class="login-card" id="form-login">
+        <form class="login-card" id="form-registro">
             <h1 class="login-title">Food Store</h1>
-            <p class="login-subtitle">Iniciar Sesión</p>
+            <p class="login-subtitle">Crear Cuenta</p>
 
             <div class="form-group">
                 <label for="email">Email:</label>
@@ -22,14 +22,14 @@
                 <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" required>
             </div>
 
-            <button type="submit" class="btn-submit">INGRESAR</button>
+            <button type="submit" class="btn-submit">REGISTRARSE</button>
             <p id="error-msg" style="color: #dc3545; font-size: 0.85rem; margin-top: 0.75rem; text-align: center; display: none;"></p>
 
             <div class="form-footer">
-                <p>¿No tenés cuenta? <a href="/src/pages/auth/registro/index.html" class="register-link">Registrate</a></p>
+                <p>¿Ya tenés cuenta? <a href="/src/pages/auth/login/login.html" class="register-link">Iniciá Sesión</a></p>
             </div>
         </form>
     </main>
-    <script type="module" src="./login.ts"></script>
+    <script type="module" src="./registro.ts"></script>
 </body>
 </html>

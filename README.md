@@ -46,6 +46,8 @@ src/
   * Persistencia completa en `localStorage` bajo la clave `"cart"`.
   * Vista dedicada con controles de incremento, decremento, eliminación por ítem, vaciado completo y cálculo automático del total acumulado.
 
+ **Nota**: el guard de autenticación (`main.ts`) se mantiene tal como venía del TP integrador, sin modificaciones, conforme indica la consigna de esta evaluación (no se evalúa protección de rutas en esta instancia).
+
 ## 💻 Tecnologías utilizadas
 
 * HTML5 / CSS3

@@ -3,10 +3,9 @@ export const navegarA = (ruta: string): void => {
 };
 
 export const rutas = {
-  login: '/src/pages/auth/login/index.html',
-  registro: '/src/pages/auth/registro/index.html',
-  admin: '/src/pages/admin/index.html',
-  //client: '/src/pages/client/index.html',
+  login: '/src/pages/auth/login/login.html',
+  registro: '/src/pages/auth/registro/registro.html',
+  admin: '/src/pages/admin/admin.html',  
   client: '/src/pages/client/home/home.html',
   cart: '/src/pages/client/cart/cart.html',
 };
