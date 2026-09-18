@@ -48,7 +48,7 @@ function renderCart(): void {
             src="${product.imagen}" 
             alt="${product.nombre}" 
             style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px;"
-            onerror="this.onerror=null; this.src='/public/favicon.svg';"
+            onerror="this.onerror=null; this.src='/favicon.svg';"
           />
           <div>
             <strong>${product.nombre}</strong>

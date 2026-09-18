@@ -44,7 +44,7 @@ function renderProducts(): void {
       <img 
         src="${product.imagen}" 
         alt="${product.nombre}" 
-        onerror="this.onerror=null; this.src='/public/favicon.svg';"
+        onerror="this.onerror=null; this.src='/favicon.svg';"
       />
       <h3>${product.nombre}</h3>
       <p class="descripcion">${product.descripcion}</p>
