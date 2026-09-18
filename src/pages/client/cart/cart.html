@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito de Compras - Food Store</title>
+  <link rel="stylesheet" href="./cart.css" />
+</head>
+<body>
+  <header>
+    <h1>Food Store</h1>
+    <nav>
+      <a href="../home/home.html">← Seguir comprando</a>
+    </nav>
+  </header>
+
+  <main style="max-width: 900px; margin: 2rem auto; padding: 0 1rem; flex: 1;">
+    <h2 style="color: #2c3e50; margin-bottom: 1rem;">Tu Carrito de Compras</h2>
+
+    <!-- Mensaje cuando no hay productos -->
+    <div id="empty-cart-message" class="cart-box" style="display: none; text-align: center; padding: 3rem;">
+      <p style="font-size: 1.2rem; color: #666; margin-bottom: 1rem;">El carrito está vacío.</p>
+      <a href="../home/home.html" style="color: var(--color-primario); font-weight: bold; text-decoration: none;">Ir al catálogo de productos</a>
+    </div>
+
+    <!-- Contenedor con la tabla y el resumen -->
+    <div id="cart-content" class="cart-box">
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; border-top: 2px solid var(--color-fondo); padding-top: 1.5rem;">
+        <button id="clear-cart-btn" type="button" class="btn-clear">Vaciar Carrito</button>
+        <div style="font-size: 1.4rem; color: #2c3e50;">
+          <strong>Total: </strong><span id="cart-total" style="color: var(--color-primario); font-weight: bold;">$0</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Food Store - Carrito de Compras</p>
+  </footer>
+
+  <script type="module" src="./cart.ts"></script>
+</body>
+</html>

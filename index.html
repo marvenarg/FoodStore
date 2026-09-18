@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Store</title>
+</head>
+<body>
+  <script type="module">
+    import { getCurrentUser } from './src/utils/auth';
+    import { navegarA, rutas } from './src/utils/navigate';
+    import { Rol } from './src/types/Rol';
+
+    const usuario = getCurrentUser();
+    if (!usuario) {
+      navegarA(rutas.login);
+    } else if (usuario.rol === Rol.ADMIN) {
+      navegarA(rutas.admin);
+    } else {
+      navegarA(rutas.client);
+    }
+  </script>
+</body>
+</html>

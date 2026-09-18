@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Store - Catálogo</title>
+  <link rel="stylesheet" href="../client.css" />
+</head>
+<body>
+  <header>
+    <h1>Food Store</h1>
+    <nav>
+      <a href="../cart/cart.html" style="background-color: var(--color-primario); padding: 0.5rem 1rem; border-radius: 6px;">
+        🛒 Ver Carrito
+      </a>
+    </nav>
+  </header>
+
+  <div class="layout-container">
+    <!-- Barra lateral con Categorías -->
+    <aside>
+      <h2>Categorías</h2>
+      <ul id="lista-categorias">
+        <!-- Generadas dinámicamente -->
+      </ul>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <main>
+      <!-- Buscador -->
+      <div class="search-form">
+        <input 
+          type="search" 
+          id="search-input" 
+          placeholder="Buscar productos por nombre..." 
+        />
+      </div>
+
+      <!-- Mensaje sin resultados -->
+      <div id="no-products-msg" style="display: none; padding: 2rem; text-align: center; color: #666;">
+        <p>No se encontraron productos que coincidan con la búsqueda.</p>
+      </div>
+
+      <!-- Grilla de productos con estilos de client.css -->
+      <section id="products-container" class="grid-productos">
+        <!-- Renderizado dinámicamente -->
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Food Store - Catálogo de Clientes</p>
+  </footer>
+
+  <script type="module" src="./home.ts"></script>
+</body>
+</html>
