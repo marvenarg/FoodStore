@@ -4,7 +4,7 @@ Proyecto "Food Store", Evaluación 1 de Programación 3.
 
 ## 🔗 Enlace Video
 
-[Explicación del Código](https://youtu.be/AQUI_IRIA_MI_ENLACE_DE_VIDEO)
+[Explicación del Código](https://www.youtube.com/watch?v=GiYI6GyQKy8)
 
 ## 📖 Descripción
 
