@@ -11,18 +11,25 @@ const noProductsMsg = document.getElementById("no-products-msg") as HTMLElement 
 let selectedCategoryId: number | null = null;
 let searchQuery: string = "";
 
+function normalizar(texto: string): string {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+}
+
 function renderProducts(): void {
   if (!productsContainer) return;
 
   const filtered = PRODUCTS.filter((product) => {
+    if (product.eliminado) return false;
+
     const matchesCategory =
       selectedCategoryId === null ||
-      //product.categorias.some((c) => c.id === selectedCategoryId);
       product.categorias.some((c: ICategoria) => c.id === selectedCategoryId);
 
-    const matchesSearch = product.nombre
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase().trim());
+    const matchesSearch = normalizar(product.nombre).includes(normalizar(searchQuery));
 
     return matchesCategory && matchesSearch;
   });

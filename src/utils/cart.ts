@@ -21,9 +21,9 @@ export function addToCart(product: IProduct, cantidad: number = 1): void {
   const existingItem = items.find((item) => item.product.id === product.id);
 
   if (existingItem) {
-    existingItem.cantidad += cantidad;
+    existingItem.cantidad = clampToStock(existingItem.cantidad + cantidad, product.stock);
   } else {
-    items.push({ product, cantidad });
+    items.push({ product, cantidad: clampToStock(cantidad, product.stock) });
   }
 
   saveCartItems(items);
@@ -38,7 +38,7 @@ export function updateCartItemQuantity(productId: number, cantidad: number): voi
   const items = getCartItems();
   const item = items.find((i) => i.product.id === productId);
   if (item) {
-    item.cantidad = cantidad;
+    item.cantidad = clampToStock(cantidad, item.product.stock);
     saveCartItems(items);
   }
 }
@@ -55,4 +55,8 @@ export function calculateCartTotal(): number {
 
 export function clearCart(): void {
   localStorage.removeItem(CART_KEY);
+}
+
+function clampToStock(cantidad: number, stock: number): number {
+  return stock > 0 ? Math.min(cantidad, stock) : cantidad;
 }
