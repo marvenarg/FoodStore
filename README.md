@@ -38,7 +38,7 @@ src/
 
 * **Catálogo Dinámico**: Renderizado modular de productos y categorías desde `src/data/data.ts`, tipado estrictamente con interfaces TypeScript (`IProduct`, `ICategoria`).
 * **Resiliencia Visual**: Manejo de imágenes con evento onerror para mostrar un fallback automático ante caídas o errores de enlaces externos, junto con normalización CSS (object-fit: cover) para preservar la grilla.
-* **Validaciones de Integridad**: Control de stock disponible al agregar o incrementar productos en el carrito, exclusión de productos dados de baja (`eliminado`) del catálogo, y búsqueda insensible a acentos.
+* **Validaciones de Integridad**: Control de stock disponible tanto en el catálogo (deshabilita "Agregar al carrito" cuando no hay stock o el producto no está disponible) como en el carrito (tope al incrementar cantidades), exclusión de productos dados de baja (`eliminado`) del catálogo, y búsqueda insensible a acentos.
 * **Búsqueda y Filtros**:
   * Buscador en tiempo real por nombre de producto con validación visual ante ausencia de coincidencias.
   * Menú lateral de categorías con opción de restablecer la vista general.
