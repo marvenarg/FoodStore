@@ -188,9 +188,9 @@ export const PRODUCTS: IProduct[] = [
     nombre: "Brownie con Helado",
     precio: 2200.0,
     descripcion: "Brownie de chocolate tibio con bocha de vainilla",
-    stock: 1,
+    stock: 0,
     imagen: "https://i.pinimg.com/736x/82/48/2f/82482f008093a96d97635468b7dcdef2.jpg",
-    disponible: true,
+    disponible: false,
     categorias: [categorias[3]],
   },
   {
