@@ -60,7 +60,7 @@ function renderCart(): void {
         <div class="quantity-controls" style="display: inline-flex; align-items: center; gap: 6px;">
           <button type="button" class="btn-qty btn-decrease" data-id="${product.id}">-</button>
           <span class="qty-display">${cantidad}</span>
-          <button type="button" class="btn-qty btn-increase" data-id="${product.id}" ${product.stock > 0 && cantidad >= product.stock ? "disabled" : ""}>+</button>
+          <button type="button" class="btn-qty btn-increase" data-id="${product.id}" ${cantidad >= product.stock ? "disabled" : ""}>+</button>
         </div>
       </td>
       <td>$${subtotal.toLocaleString("es-AR")}</td>

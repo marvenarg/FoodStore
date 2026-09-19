@@ -47,6 +47,8 @@ function renderProducts(): void {
     const card = document.createElement("article");
     card.className = "producto-card";
 
+    const sinStock = !product.disponible || product.stock <= 0;
+
     card.innerHTML = `
       <img 
         src="${product.imagen}" 
@@ -56,8 +58,8 @@ function renderProducts(): void {
       <h3>${product.nombre}</h3>
       <p class="descripcion">${product.descripcion}</p>
       <div class="precio">$${product.precio.toLocaleString("es-AR")}</div>
-      <button type="button" class="btn-add-cart" data-id="${product.id}">
-        Agregar al carrito
+      <button type="button" class="btn-add-cart" data-id="${product.id}" ${sinStock ? "disabled" : ""}>
+        ${sinStock ? "Sin stock" : "Agregar al carrito"}
       </button>
     `;
 

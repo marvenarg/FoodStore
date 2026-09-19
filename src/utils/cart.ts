@@ -17,6 +17,8 @@ export function saveCartItems(items: ICartItem[]): void {
 }
 
 export function addToCart(product: IProduct, cantidad: number = 1): void {
+  if (product.stock <= 0) return;
+
   const items = getCartItems();
   const existingItem = items.find((item) => item.product.id === product.id);
 
